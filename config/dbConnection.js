@@ -7,6 +7,7 @@ const dbConnection = async () => {
         const{ connection } = await mongoose.connect(
             process.env.MONGO_URI || "mongodb://localhost:27017"
         );
+        
         if(connection){
             console.log(`connected to MongoDB at ${connection.host}`);
         }
