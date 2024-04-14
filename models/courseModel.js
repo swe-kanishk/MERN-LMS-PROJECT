@@ -60,7 +60,7 @@ const courseSchema = new Schema(
     },
     createdBy: {
       type: String,
-      required: [true, 'CreatedBy field is required!'],
+      required: [true, "CreatedBy field is required!"],
       trim: true,
     },
   },
