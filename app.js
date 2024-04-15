@@ -6,6 +6,7 @@ import morgan from "morgan";
 
 import userRoutes from "./routes/userRoutes.js";
 import courseRoutes from "./routes/courseRoutes.js";
+import paymentRoutes from "./routes/paymentRoutes.js";
 import errorMiddleware from "./middlewares/errorMiddleware.js";
 
 app.use(express.json());
@@ -27,6 +28,7 @@ app.use("/ping", (req, res) => {
 
 app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/course", courseRoutes);
+app.use("/api/v1/payments", paymentRoutes);
 
 app.all("*", (req, res) => {
   res.status(404).send("OOPS! 404 page not found");
